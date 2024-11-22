@@ -1,9 +1,12 @@
 name: ETL Pipeline
 
 on:
-  schedule:
-    - cron: "0 * * * *"  # Run every hour
-  workflow_dispatch:  # Allows manual trigger from GitHub UI
+  # # Comment out the cron job to stop the automated schedule
+  # schedule:
+  #   - cron: "0 * * * *"  # Run every hour
+
+  # # Comment out or remove the manual trigger as well
+  # workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 jobs:
   run-etl:
