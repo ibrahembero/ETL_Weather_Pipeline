@@ -1,0 +1,109 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "pymongo",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "ConnectionFailure",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "weather_etl",
+        "description": "weather_etl",
+        "peekOfCode": "MONGO_URI = \"mongodb+srv://ih1004569bero:SMR7ANshotUm1ImH@cluster0.deuhb.mongodb.net/weather_data?retryWrites=true&w=majority\"\nclient = pymongo.MongoClient(MONGO_URI)\ntry:\n     # The ismaster command is cheap and does not require auth \n     client.admin.command('ismaster') \n     print(\"MongoDB connection: Successful\") \nexcept ConnectionFailure: print(\"MongoDB connection: Failed\")\ndb = client['weather_data']  # Name of the database\ncollection = db['forecast']  # Name of the collection\n# Step 1: Extract data from the OpenWeatherMap API",
+        "detail": "weather_etl",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "weather_etl",
+        "description": "weather_etl",
+        "peekOfCode": "client = pymongo.MongoClient(MONGO_URI)\ntry:\n     # The ismaster command is cheap and does not require auth \n     client.admin.command('ismaster') \n     print(\"MongoDB connection: Successful\") \nexcept ConnectionFailure: print(\"MongoDB connection: Failed\")\ndb = client['weather_data']  # Name of the database\ncollection = db['forecast']  # Name of the collection\n# Step 1: Extract data from the OpenWeatherMap API\nAPI_KEY = \"772f524d88d9b3db8a4e758a22d1544c\"  # Replace with your OpenWeatherMap API key",
+        "detail": "weather_etl",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "weather_etl",
+        "description": "weather_etl",
+        "peekOfCode": "db = client['weather_data']  # Name of the database\ncollection = db['forecast']  # Name of the collection\n# Step 1: Extract data from the OpenWeatherMap API\nAPI_KEY = \"772f524d88d9b3db8a4e758a22d1544c\"  # Replace with your OpenWeatherMap API key\n# List of 200 cities\ncities = [\n    \"London\", \"New York\", \"Paris\", \"Tokyo\", \"Sydney\", \"Berlin\", \"Moscow\", \"Rio de Janeiro\", \"Los Angeles\", \"Rome\",\n    \"Toronto\", \"Mexico City\", \"Dubai\", \"Seoul\", \"Hong Kong\", \"Istanbul\", \"Singapore\", \"Barcelona\", \"Buenos Aires\", \"Chicago\",\n    \"Bangkok\", \"Delhi\", \"Mumbai\", \"Lagos\", \"Kuala Lumpur\", \"Jakarta\", \"Cape Town\", \"São Paulo\", \"Cairo\", \"Lagos\",\n    \"Madrid\", \"Santiago\", \"Buenos Aires\", \"Lima\", \"Shenzhen\", \"Chicago\", \"Dubai\", \"Beijing\", \"Milan\", \"Paris\",",
+        "detail": "weather_etl",
+        "documentation": {}
+    },
+    {
+        "label": "collection",
+        "kind": 5,
+        "importPath": "weather_etl",
+        "description": "weather_etl",
+        "peekOfCode": "collection = db['forecast']  # Name of the collection\n# Step 1: Extract data from the OpenWeatherMap API\nAPI_KEY = \"772f524d88d9b3db8a4e758a22d1544c\"  # Replace with your OpenWeatherMap API key\n# List of 200 cities\ncities = [\n    \"London\", \"New York\", \"Paris\", \"Tokyo\", \"Sydney\", \"Berlin\", \"Moscow\", \"Rio de Janeiro\", \"Los Angeles\", \"Rome\",\n    \"Toronto\", \"Mexico City\", \"Dubai\", \"Seoul\", \"Hong Kong\", \"Istanbul\", \"Singapore\", \"Barcelona\", \"Buenos Aires\", \"Chicago\",\n    \"Bangkok\", \"Delhi\", \"Mumbai\", \"Lagos\", \"Kuala Lumpur\", \"Jakarta\", \"Cape Town\", \"São Paulo\", \"Cairo\", \"Lagos\",\n    \"Madrid\", \"Santiago\", \"Buenos Aires\", \"Lima\", \"Shenzhen\", \"Chicago\", \"Dubai\", \"Beijing\", \"Milan\", \"Paris\",\n    \"Melbourne\", \"Bangkok\", \"Toronto\", \"San Francisco\", \"Montreal\", \"Cape Town\", \"Zurich\", \"Vienna\", \"Stockholm\", \"Moscow\",",
+        "detail": "weather_etl",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "weather_etl",
+        "description": "weather_etl",
+        "peekOfCode": "API_KEY = \"772f524d88d9b3db8a4e758a22d1544c\"  # Replace with your OpenWeatherMap API key\n# List of 200 cities\ncities = [\n    \"London\", \"New York\", \"Paris\", \"Tokyo\", \"Sydney\", \"Berlin\", \"Moscow\", \"Rio de Janeiro\", \"Los Angeles\", \"Rome\",\n    \"Toronto\", \"Mexico City\", \"Dubai\", \"Seoul\", \"Hong Kong\", \"Istanbul\", \"Singapore\", \"Barcelona\", \"Buenos Aires\", \"Chicago\",\n    \"Bangkok\", \"Delhi\", \"Mumbai\", \"Lagos\", \"Kuala Lumpur\", \"Jakarta\", \"Cape Town\", \"São Paulo\", \"Cairo\", \"Lagos\",\n    \"Madrid\", \"Santiago\", \"Buenos Aires\", \"Lima\", \"Shenzhen\", \"Chicago\", \"Dubai\", \"Beijing\", \"Milan\", \"Paris\",\n    \"Melbourne\", \"Bangkok\", \"Toronto\", \"San Francisco\", \"Montreal\", \"Cape Town\", \"Zurich\", \"Vienna\", \"Stockholm\", \"Moscow\",\n    # \"San Diego\", \"Kuala Lumpur\", \"Manila\", \"Dubai\", \"London\", \"Lisbon\", \"Paris\", \"Rome\", \"Madrid\", \"Hamburg\",\n    # \"Vienna\", \"Berlin\", \"Frankfurt\", \"Munich\", \"Warsaw\", \"Budapest\", \"Copenhagen\", \"Helsinki\", \"Oslo\", \"Barcelona\",",
+        "detail": "weather_etl",
+        "documentation": {}
+    },
+    {
+        "label": "cities",
+        "kind": 5,
+        "importPath": "weather_etl",
+        "description": "weather_etl",
+        "peekOfCode": "cities = [\n    \"London\", \"New York\", \"Paris\", \"Tokyo\", \"Sydney\", \"Berlin\", \"Moscow\", \"Rio de Janeiro\", \"Los Angeles\", \"Rome\",\n    \"Toronto\", \"Mexico City\", \"Dubai\", \"Seoul\", \"Hong Kong\", \"Istanbul\", \"Singapore\", \"Barcelona\", \"Buenos Aires\", \"Chicago\",\n    \"Bangkok\", \"Delhi\", \"Mumbai\", \"Lagos\", \"Kuala Lumpur\", \"Jakarta\", \"Cape Town\", \"São Paulo\", \"Cairo\", \"Lagos\",\n    \"Madrid\", \"Santiago\", \"Buenos Aires\", \"Lima\", \"Shenzhen\", \"Chicago\", \"Dubai\", \"Beijing\", \"Milan\", \"Paris\",\n    \"Melbourne\", \"Bangkok\", \"Toronto\", \"San Francisco\", \"Montreal\", \"Cape Town\", \"Zurich\", \"Vienna\", \"Stockholm\", \"Moscow\",\n    # \"San Diego\", \"Kuala Lumpur\", \"Manila\", \"Dubai\", \"London\", \"Lisbon\", \"Paris\", \"Rome\", \"Madrid\", \"Hamburg\",\n    # \"Vienna\", \"Berlin\", \"Frankfurt\", \"Munich\", \"Warsaw\", \"Budapest\", \"Copenhagen\", \"Helsinki\", \"Oslo\", \"Barcelona\",\n    # \"Athens\", \"Istanbul\", \"Montreal\", \"Montpellier\", \"Auckland\", \"Brisbane\", \"Sydney\", \"New Orleans\", \"Cairo\", \"Chennai\",\n    # \"Jakarta\", \"Vancouver\", \"Toronto\", \"Kyiv\", \"Tel Aviv\", \"Tunis\", \"Kigali\", \"Santiago\", \"Medellin\", \"Addis Ababa\",",
+        "detail": "weather_etl",
+        "documentation": {}
+    },
+    {
+        "label": "weather_data",
+        "kind": 5,
+        "importPath": "weather_etl",
+        "description": "weather_etl",
+        "peekOfCode": "weather_data = []\n# Loop through the cities and fetch weather data\nfor city in cities:\n    # Step 1: Extract data from the OpenWeatherMap API\n    URL = f\"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}\"\n    response = requests.get(URL)\n    if response.status_code == 200:\n        data = response.json()\n        # Step 2: Transform data (extract specific columns)\n        # Extract relevant weather data",
+        "detail": "weather_etl",
+        "documentation": {}
+    }
+]
